@@ -1,0 +1,11 @@
+<section>
+  <google-map
+    height="35vh"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    (mapClick)="addMarker($event)"
+  >
+    <map-marker *ngIf="markerPosition" [position]="markerPosition"></map-marker>
+  </google-map>
+</section>

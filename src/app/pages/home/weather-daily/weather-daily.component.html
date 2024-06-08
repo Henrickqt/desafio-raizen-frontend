@@ -1,0 +1,8 @@
+<app-card title="Previsão diária">
+  <main body>
+    <app-weather-daily-item
+      *ngFor="let item of weatherDailyList"
+      [weatherDaily]="item"
+    ></app-weather-daily-item>
+  </main>
+</app-card>

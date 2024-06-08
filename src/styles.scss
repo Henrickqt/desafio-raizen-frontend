@@ -1,0 +1,9 @@
+@import "./assets/scss/styles";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include text-base-regular;
+  color: $color-common-600;
+}

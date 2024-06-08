@@ -1,0 +1,9 @@
+<section>
+  <app-weather-current [weatherCurrent]="weatherCurrent"></app-weather-current>
+  <app-map (mapClick)="getWeatherForecast($event)"></app-map>
+  <app-weather-history></app-weather-history>
+  <app-weather-daily [weatherDailyList]="weatherDailyList"></app-weather-daily>
+  <app-weather-hourly
+    [weatherHourlyList]="weatherHourlyList"
+  ></app-weather-hourly>
+</section>

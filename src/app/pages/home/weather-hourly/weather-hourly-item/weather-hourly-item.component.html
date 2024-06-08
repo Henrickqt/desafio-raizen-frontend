@@ -1,0 +1,23 @@
+<article>
+  <strong>{{ weatherHourly.hour }}</strong>
+  <span>{{ weatherHourly.dayOfWeek }}</span>
+  <img
+    [src]="
+      'https://openweathermap.org/img/wn/' + weatherHourly.icon + '@4x.png'
+    "
+    alt="weather icon"
+  />
+  <span>{{ weatherHourly.temperature }} º</span>
+  <div class="precipitation">
+    <img src="icons/precipitation.svg" alt="Precipitação" />
+    <span>{{ weatherHourly.precipitation }} %</span>
+  </div>
+  <div class="humidity">
+    <img src="icons/humidity.svg" alt="Humidade" />
+    <span>{{ weatherHourly.humidity }} %</span>
+  </div>
+  <div class="wind-speed">
+    <img src="icons/wind-speed.svg" alt="Vento" />
+    <span>{{ weatherHourly.windSpeed | number : "1.1-1" }} km/h</span>
+  </div>
+</article>

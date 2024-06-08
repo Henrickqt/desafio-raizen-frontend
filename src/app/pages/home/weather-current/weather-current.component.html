@@ -1,0 +1,27 @@
+<app-card title="Previsão atual">
+  <main body>
+    <img
+      class="big-icon"
+      [src]="
+        'https://openweathermap.org/img/wn/' + weatherCurrent.icon + '@2x.png'
+      "
+      alt="weather icon"
+    />
+    <div class="temperature">
+      <strong>{{ weatherCurrent.temperature }}º</strong>
+      <span>{{ weatherCurrent.description }}</span>
+    </div>
+    <div class="precipitation">
+      <img src="icons/precipitation.svg" alt="Precipitação" />
+      <span>{{ weatherCurrent.precipitation }} %</span>
+    </div>
+    <div class="humidity">
+      <img src="icons/humidity.svg" alt="Humidade" />
+      <span>{{ weatherCurrent.humidity }} %</span>
+    </div>
+    <div class="wind-speed">
+      <img src="icons/wind-speed.svg" alt="Vento" />
+      <span>{{ weatherCurrent.windSpeed | number : "1.1-1" }} km/h</span>
+    </div>
+  </main>
+</app-card>

@@ -1,0 +1,10 @@
+<article>
+  <img
+    [src]="'https://openweathermap.org/img/wn/' + weatherDaily.icon + '@2x.png'"
+    alt="weather icon"
+  />
+  <strong>
+    {{ weatherDaily.temperatureMax }} º | {{ weatherDaily.temperatureMin }} º
+  </strong>
+  <strong>{{ weatherDaily.dayOfWeek }}</strong>
+</article>

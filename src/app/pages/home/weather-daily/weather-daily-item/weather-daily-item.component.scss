@@ -1,0 +1,16 @@
+@import "../../../../../assets/scss/styles";
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $color-common-200;
+  padding: 0 1.5rem;
+
+  img {
+    height: 4rem;
+    width: 4rem;
+  }
+}

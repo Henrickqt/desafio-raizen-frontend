@@ -1,0 +1,8 @@
+<app-card title="Previsão para as próximas horas">
+  <main body>
+    <app-weather-hourly-item
+      *ngFor="let item of weatherHourlyList"
+      [weatherHourly]="item"
+    ></app-weather-hourly-item>
+  </main>
+</app-card>
