@@ -1,5 +1,8 @@
 <article>
-  <span>14:34:56</span>
+  <div>
+    <span>{{ weatherHistory.date | date : "MM/d/yyyy" }}</span>
+    <span>{{ weatherHistory.date | date : "hh:mm:ss" }}</span>
+  </div>
   <span>{{ weatherHistory.latitude }}</span>
   <span>{{ weatherHistory.longitude }}</span>
 </article>

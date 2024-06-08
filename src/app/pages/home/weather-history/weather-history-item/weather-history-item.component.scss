@@ -10,6 +10,15 @@ article {
   padding: 0.5rem 1.5rem;
   cursor: pointer;
 
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    margin: auto 0 auto;
+  }
+
   &:hover {
     background-color: $color-common-200;
   }

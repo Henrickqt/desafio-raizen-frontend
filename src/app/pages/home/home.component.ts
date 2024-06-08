@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
       next: (response) => {
         this.weatherHistoryList = response.map((x) => ({
           weatherForecastId: x.weatherForecastId,
+          date: x.date,
           latitude: x.latitude,
           longitude: x.longitude,
         }));
@@ -88,6 +89,7 @@ export class HomeComponent implements OnInit {
     this.weatherHistoryList = [
       {
         weatherForecastId: response.weatherForecastId,
+        date: response.date,
         latitude: response.latitude,
         longitude: response.longitude,
       },
