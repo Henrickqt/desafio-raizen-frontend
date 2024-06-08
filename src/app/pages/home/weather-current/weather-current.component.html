@@ -6,13 +6,14 @@
     <app-not-found></app-not-found>
   </section>
   <main *ngIf="!isLoading && weatherCurrent.icon" body>
-    <img
-      class="big-icon"
-      [src]="
-        'https://openweathermap.org/img/wn/' + weatherCurrent.icon + '@2x.png'
-      "
-      alt="weather icon"
-    />
+    <div class="big-icon">
+      <img
+        [src]="
+          'https://openweathermap.org/img/wn/' + weatherCurrent.icon + '@2x.png'
+        "
+        alt="weather icon"
+      />
+    </div>
     <div class="temperature">
       <strong>{{ weatherCurrent.temperature }}º</strong>
       <span>{{ weatherCurrent.description }}</span>

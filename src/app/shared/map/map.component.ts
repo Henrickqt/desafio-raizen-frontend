@@ -32,4 +32,15 @@ export class MapComponent {
       lng: longitude,
     };
   }
+
+  getMarkerLocation(callback: ((address: string) => void)) {
+    if (!this.markerPosition) return;
+
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ location: this.markerPosition }, (results, status) => {
+      if (status == google.maps.GeocoderStatus.OK && results && results.length !== 0) {
+        callback(results[1].formatted_address);
+      }
+    });
+  }
 }

@@ -1,20 +1,43 @@
 @import "../../../assets/scss/styles";
 
 section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
   height: 100%;
-  padding: 2rem;
   background-color: $color-common-100;
+  overflow-y: scroll;
 
-  app-map {
-    grid-column-start: 2;
-    grid-column-end: 4;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem 2rem 0;
+
+    img {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    h1 {
+      @include text-2xl-bold;
+      color: $color-common-800;
+    }
   }
 
-  app-weather-hourly {
-    grid-column-start: 2;
-    grid-column-end: 5;
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    // height: 100%;
+    padding: 2rem;
+
+    app-map {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    app-weather-hourly {
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
   }
 }

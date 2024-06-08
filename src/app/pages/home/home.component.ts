@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   public weatherDailyList: WeatherDailyModel[] = [];
   public weatherHourlyList: WeatherHourlyModel[] = [];
   public weatherHistoryList: WeatherHistoryModel[] = [];
-
+  public address: string = 'Nenhum endereço selecionado'
   public isLoading: boolean = true;
 
   @ViewChild('map') map?: MapComponent;
@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit {
 
         if (this.map) {
           this.map.setMarker(response.latitude, response.longitude);
+          this.map.getMarkerLocation((address) => this.getMarkerLocationCallback(address));
         }
       },
     });
@@ -81,8 +82,16 @@ export class HomeComponent implements OnInit {
         this.weatherCurrentMap(response);
         this.weatherHourlyMap(response.hourly);
         this.weatherDailyMap(response.daily);
+
+        if (this.map) {
+          this.map.getMarkerLocation((address) => this.getMarkerLocationCallback(address));
+        }
       },
     });
+  }
+
+  getMarkerLocationCallback(address: string) {
+    this.address = address;
   }
 
   weatherHistoryMap(response: WeatherForecastResponseModel) {

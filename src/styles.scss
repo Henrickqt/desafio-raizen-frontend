@@ -7,3 +7,25 @@
   @include text-base-regular;
   color: $color-common-600;
 }
+
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 1280px) and (max-width: 1536px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
+}
