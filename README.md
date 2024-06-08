@@ -1,27 +1,37 @@
-# OpenWeatherFrontend
+# Open Weather Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+Frontend desenvolvido utilizando [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3 e Google Maps API. Este projeto é uma aplicação web que fornece dashboards interativos, além de uma integração com o Google Maps para a visualização e interação com mapas. A aplicação consome uma API externa para obter dados que são exibidos no mapa e nos dashboards.
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+- [Node.js](https://nodejs.org/en/)
+- [Angular CLI](https://cli.angular.io/). 
 
-## Code scaffolding
+## Como executar
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone o repositório:
+```bash
+$ git clone https://github.com/Henrickqt/desafio-raizen-frontend.git
+```
 
-## Build
+2. Navegue até o diretório do projeto:
+```bash
+$ cd desafio-raizen-frontend
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Instale as dependências:
+```bash
+$ npm install
+```
 
-## Running unit tests
+4. Para iniciar a aplicação, execute o comando:
+```bash
+$ ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A aplicação estará disponível no endereço `http://localhost:4200/`.
 
-## Running end-to-end tests
+## API
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+A aplicação consome a API do [Open Weather API](https://github.com/Henrickqt/desafio-raizen-api) na porta `5001`. Esta API é quem fornece os dados para popular os dashboards. Além disso, um histórico de consultas é exibido em tela, ao qual são passíveis de serem recarregados através de um clique.
