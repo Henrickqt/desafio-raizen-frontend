@@ -15,6 +15,10 @@ import { WeatherHourlyComponent } from './pages/home/weather-hourly/weather-hour
 import { WeatherDailyItemComponent } from './pages/home/weather-daily/weather-daily-item/weather-daily-item.component';
 import { WeatherHourlyItemComponent } from './pages/home/weather-hourly/weather-hourly-item/weather-hourly-item.component';
 import { provideHttpClient } from '@angular/common/http';
+import { WeatherHistoryItemComponent } from './pages/home/weather-history/weather-history-item/weather-history-item.component';
+import { WeatherHistoryHeaderComponent } from './pages/home/weather-history/weather-history-header/weather-history-header.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { provideHttpClient } from '@angular/common/http';
     WeatherHourlyComponent,
     WeatherDailyItemComponent,
     WeatherHourlyItemComponent,
+    WeatherHistoryItemComponent,
+    WeatherHistoryHeaderComponent,
+    NotFoundComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { DailyModel } from "./daily.model";
 import { HourlyModel } from "./hourly.model";
 
 export class WeatherForecastResponseModel {
+  weatherForecastId: number = 0;
   latitude: number = 0;
   longitude: number = 0;
   timezone: string = '';

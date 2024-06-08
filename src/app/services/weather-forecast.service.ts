@@ -13,6 +13,14 @@ export class WeatherForecastService {
   constructor(private http: HttpClient) { }
 
   getWeatherForecast(request: WeatherForecastRequestModel) {
-    return this.http.get<WeatherForecastResponseModel>(this.baseUrl, { params: { ...request }})
+    return this.http.get<WeatherForecastResponseModel>(this.baseUrl, { params: { ...request }});
+  }
+
+  getWeatherForecastHistory() {
+    return this.http.get<WeatherForecastResponseModel[]>(`${this.baseUrl}/history`);
+  }
+
+  getWeatherForecastHistoryById(weatherForecastId: number) {
+    return this.http.get<WeatherForecastResponseModel>(`${this.baseUrl}/history/${weatherForecastId}`);
   }
 }

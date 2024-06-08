@@ -8,4 +8,5 @@ import { WeatherHourlyModel } from './models/weather-hourly.model';
 })
 export class WeatherHourlyComponent {
   @Input() weatherHourlyList: WeatherHourlyModel[] = [];
+  @Input() isLoading: boolean = false;
 }

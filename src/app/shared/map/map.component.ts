@@ -10,7 +10,7 @@ export class MapComponent {
   public markerPosition?: google.maps.LatLngLiteral;
   public center: google.maps.LatLngLiteral = {
     lat: -23.209000600373493,
-    lng: -46.65576271409623
+    lng: -46.65576271409623,
   };
 
   @Output() mapClick: EventEmitter<google.maps.LatLngLiteral> = new EventEmitter<google.maps.LatLngLiteral>();
@@ -20,5 +20,16 @@ export class MapComponent {
       this.markerPosition = event.latLng.toJSON();
       this.mapClick.emit(this.markerPosition);
     }
+  }
+
+  setMarker(latitude: number, longitude: number) {
+    this.markerPosition = {
+      lat: latitude,
+      lng: longitude,
+    };
+    this.center = {
+      lat: latitude,
+      lng: longitude,
+    };
   }
 }

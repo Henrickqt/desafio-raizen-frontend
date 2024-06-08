@@ -1,5 +1,11 @@
 <app-card title="Previsão diária">
-  <main body>
+  <section *ngIf="isLoading" body>
+    <app-loading></app-loading>
+  </section>
+  <section *ngIf="!isLoading && weatherDailyList.length === 0" body>
+    <app-not-found></app-not-found>
+  </section>
+  <main *ngIf="!isLoading && weatherDailyList.length !== 0" body>
     <app-weather-daily-item
       *ngFor="let item of weatherDailyList"
       [weatherDaily]="item"

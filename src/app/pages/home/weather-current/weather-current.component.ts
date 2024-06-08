@@ -8,4 +8,5 @@ import { WeatherCurrentModel } from './models/weather-current.model';
 })
 export class WeatherCurrentComponent {
   @Input() weatherCurrent: WeatherCurrentModel = new WeatherCurrentModel();
+  @Input() isLoading: boolean = false;
 }

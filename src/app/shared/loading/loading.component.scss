@@ -1,0 +1,29 @@
+@import "../../../assets/scss/styles";
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  img {
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 1rem;
+    animation: loading 2s ease infinite;
+  }
+
+  strong {
+    @include text-xl-bold;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -1,5 +1,12 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21rem;
+}
+
 main {
   display: flex;
-  height: 35vh;
+  height: 21rem;
   overflow-x: scroll;
 }

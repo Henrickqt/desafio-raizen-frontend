@@ -1,0 +1,17 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16rem;
+}
+
+main {
+  height: 16rem;
+  overflow-y: scroll;
+
+  app-weather-history-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+}

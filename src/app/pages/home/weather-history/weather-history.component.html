@@ -1,1 +1,16 @@
-<app-card title="Histórico de consultas"></app-card>
+<app-card title="Histórico de consultas">
+  <section *ngIf="isLoading" body>
+    <app-loading></app-loading>
+  </section>
+  <section *ngIf="!isLoading && weatherHistoryList.length === 0" body>
+    <app-not-found></app-not-found>
+  </section>
+  <main *ngIf="!isLoading && weatherHistoryList.length !== 0" body>
+    <app-weather-history-header></app-weather-history-header>
+    <app-weather-history-item
+      *ngFor="let item of weatherHistoryList"
+      [weatherHistory]="item"
+      (click)="getWeatherForecastHistoryById(item.weatherForecastId)"
+    ></app-weather-history-item>
+  </main>
+</app-card>

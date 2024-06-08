@@ -1,5 +1,11 @@
 <app-card title="Previsão atual">
-  <main body>
+  <section *ngIf="isLoading" body>
+    <app-loading></app-loading>
+  </section>
+  <section *ngIf="!isLoading && !weatherCurrent.icon" body>
+    <app-not-found></app-not-found>
+  </section>
+  <main *ngIf="!isLoading && weatherCurrent.icon" body>
     <img
       class="big-icon"
       [src]="

@@ -8,4 +8,5 @@ import { WeatherDailyModel } from './models/weather-daily.model';
 })
 export class WeatherDailyComponent {
   @Input() weatherDailyList: WeatherDailyModel[] = [];
+  @Input() isLoading: boolean = false;
 }

@@ -1,4 +1,11 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21rem;
+}
+
 main {
-  height: 35vh;
+  height: 21rem;
   overflow-y: scroll;
 }

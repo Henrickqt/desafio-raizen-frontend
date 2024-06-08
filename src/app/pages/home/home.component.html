@@ -1,9 +1,20 @@
 <section>
-  <app-weather-current [weatherCurrent]="weatherCurrent"></app-weather-current>
-  <app-map (mapClick)="getWeatherForecast($event)"></app-map>
-  <app-weather-history></app-weather-history>
-  <app-weather-daily [weatherDailyList]="weatherDailyList"></app-weather-daily>
+  <app-weather-current
+    [weatherCurrent]="weatherCurrent"
+    [isLoading]="isLoading"
+  ></app-weather-current>
+  <app-map #map (mapClick)="getWeatherForecast($event)"></app-map>
+  <app-weather-history
+    [weatherHistoryList]="weatherHistoryList"
+    [isLoading]="isLoading"
+    (historyClick)="getWeatherForecastHistoryById($event)"
+  ></app-weather-history>
+  <app-weather-daily
+    [weatherDailyList]="weatherDailyList"
+    [isLoading]="isLoading"
+  ></app-weather-daily>
   <app-weather-hourly
     [weatherHourlyList]="weatherHourlyList"
+    [isLoading]="isLoading"
   ></app-weather-hourly>
 </section>
